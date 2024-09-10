@@ -1,0 +1,31 @@
+.container-search {
+  max-width: 770px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+input {
+  background-color: #002D3A;
+  border: 1px solid #61DAFB;
+  padding: 16px;
+  border-radius: 100px;
+  width: 100%;
+  margin-right: 16px;
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255,255,255, 0.5);
+}
+
+.searchBtn {
+  width: 52px;
+  height: 52px;
+  background-color: #05809F;
+  border: 1px solid #61DAFB;
+  border-radius: 100px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,26 @@
+header {
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid #61DAFB;
+}
+
+.content-center {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  color: #61DAFB;
+}
+
+nav div {
+  margin: 0 16px;
+}
+
+.menuOption {
+  color: #61DAFB;
+  text-decoration: none;
+}
