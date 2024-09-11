@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BookList from "../components/bookList/BookList";
+import './pages.css';
 import axios from "axios";
 
 const Books = () => {
@@ -19,12 +20,14 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Livros de Programação</h1>
+      <h1 className="title">Livros</h1>
       <BookList books={books} />
-      <button disabled={page === 0} onClick={() => setPage(page - 1)}>
-        Anterior
-      </button>
-      <button onClick={() => setPage(page + 1)}>Próxima</button>
+      <div className="buttons">
+        <button disabled={page === 0} onClick={() => setPage(page - 1)}>
+          Anterior
+        </button>
+        <button onClick={() => setPage(page + 1)}>Próxima</button>
+      </div>
     </div>
   );
 };

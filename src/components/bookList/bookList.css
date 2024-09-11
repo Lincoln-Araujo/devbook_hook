@@ -1,6 +1,7 @@
 .book-list {
   max-width: 1170px;
   display: flex;
+  flex-wrap: wrap;
   margin: 30px auto;
   width: 100%;
   justify-content: space-between;

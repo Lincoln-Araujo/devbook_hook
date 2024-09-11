@@ -21,17 +21,25 @@ const BookPage = () => {
   if (!book) return <div>Carregando...</div>;
 
   return (
-    <div>
-      <h1>{book.volumeInfo.title}</h1>
-      <p>{book.volumeInfo.authors.join(', ')}</p>
-      <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
-      <p>{book.volumeInfo.description}</p>
-      <h2>Livros Relacionados</h2>
-      <ul>
-        {relatedBooks.map(related => (
-          <li key={related.id}>{related.volumeInfo.title}</li>
-        ))}
-      </ul>
+    <div className='text-color'>
+      <div className='align'>
+        <div className='m-img'>
+          <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
+        </div>
+        <div className='m-txt'>
+          <h1 className='title-book'>{book.volumeInfo.title}</h1>
+          <p>{book.volumeInfo.authors.join(', ')}</p>
+          <p>{book.volumeInfo.description}</p>
+        </div>
+      </div>
+      <div>
+        <h2 className='title'>Livros Relacionados</h2>
+        <ul>
+          {relatedBooks.map(related => (
+            <li key={related.id}>{related.volumeInfo.title}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
