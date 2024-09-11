@@ -1,0 +1,39 @@
+.book-item {
+  background-color: rgba(0,0,0,0.2);
+  max-width: 270px;
+  width: 100%;
+  padding: 16px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  max-width: 116px;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+p {
+  font-weight: 400;
+  text-align: center;
+}
+
+@media only screen and (max-width: 980px) {
+  .book-item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
