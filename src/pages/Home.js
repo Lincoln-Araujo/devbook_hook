@@ -36,7 +36,7 @@ const Home = () => {
         <p>O Melhor Catálogo de Livros de Programação para Desenvolvedores de Todos os Níveis</p>
       </div>
       <SearchBar />
-      <BookList books={books} />
+      <BookList books={books} className=""/>
     </div>
   );
 };

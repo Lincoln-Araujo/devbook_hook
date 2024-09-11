@@ -2,9 +2,9 @@
 import React from "react";
 import BookItem from "../bookItem/BookItem";
 import './bookList.css';
+import classNames from 'classnames'
 
-
-const BookList = ({ books }) => {
+const BookList = ({ books, className="" }) => {
   // Filtra apenas livros que tenham uma imagem válida
   const booksWithImages = books.filter(
     (book) => book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail
@@ -15,7 +15,7 @@ const BookList = ({ books }) => {
   }
 
   return (
-    <div className="book-list">
+    <div className={classNames('book-list', className)}>
       {booksWithImages.map((book) => (
         <BookItem key={book.id} book={book} />
       ))}
