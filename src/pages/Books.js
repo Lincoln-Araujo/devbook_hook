@@ -2,15 +2,20 @@ import React, { useState, useEffect } from "react";
 import BookList from "../components/bookList/BookList";
 import './pages.css';
 import axios from "axios";
+import {useSearchParams, useLocation} from "react-router-dom"
 
 const Books = () => {
   const [books, setBooks] = useState([]);
   const [page, setPage] = useState(0);
+  //const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const query = searchParams.get('search');
 
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=programming&startIndex=${
+        `https://www.googleapis.com/books/v1/volumes?q=programming+${query??""}&startIndex=${
           page * 10
         }&maxResults=10`
       )
