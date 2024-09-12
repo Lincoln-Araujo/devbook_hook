@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BookList from "../components/bookList/BookList";
+import SearchBar from "../components/searchBar/SearchBar";
 import './pages.css';
 import axios from "axios";
 import {useSearchParams, useLocation} from "react-router-dom"
@@ -26,6 +27,7 @@ const Books = () => {
   return (
     <div>
       <h1 className="title">Livros</h1>
+      <SearchBar />
       <BookList books={books} />
       <div className="buttons">
         <button disabled={page === 0} onClick={() => setPage(page - 1)}>
