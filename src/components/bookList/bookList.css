@@ -8,6 +8,10 @@
   gap: 30px;
 }
 
+p {
+  color: white;
+}
+
 .vertical {
   flex-direction: column;
 }

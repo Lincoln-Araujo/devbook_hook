@@ -11,7 +11,7 @@ const BookList = ({ books, className="" }) => {
   );
 
   if (booksWithImages.length === 0) {
-    return <p>Nenhum livro encontrado com capa disponível.</p>;
+    return <p>Loading.</p>;
   }
 
   return (
